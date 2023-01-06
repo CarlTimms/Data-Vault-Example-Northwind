@@ -5,7 +5,7 @@ An example Data Vault data warehouse modelling Microsoft's Northwind sample data
 
 ### Purpose
 
-The objective of this project is to develop an easiily accessible example data warehouse illustrating how to model the well-known Northwind sample database using the Data Vault methodology.
+The objective of this project is to develop an easily accessible example data warehouse illustrating how to model the well-known Northwind sample database using the Data Vault methodology.
 
 I intend the repository to mostly be of use to new Data Vault practitioners, providing a convenient option for hands-on experimentation. Hopefully it helps join a few dots on the somewhat steep learning curve that comes with Data Vault modelling.
 
@@ -21,7 +21,7 @@ I intend the repository to mostly be of use to new Data Vault practitioners, pro
 	* SQL\DDL\Create_Database_Information_Mart.sql
 3. Confirm setup is correct with an initial load. Run the following SQL script to execute the stored procedures for the Stage_Area and Data_Vault databases.
 	* SQL\ETL\Load_Data_Vault.sql
-4. Additionally, check the contents of Meta_Metrics_Error_Mart.error.Error_Log for any unxpected errors.
+4. Additionally, check the contents of Meta_Metrics_Error_Mart.error.Error_Log for any unexpected errors.
 
 
 ### Documentation
