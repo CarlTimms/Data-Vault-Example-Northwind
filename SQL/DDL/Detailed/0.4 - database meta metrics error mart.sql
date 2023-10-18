@@ -1,0 +1,125 @@
+/*
+
+	Create database Meta_Metrics_Error_Mart
+
+*/
+
+
+USE [master]
+GO
+
+/****** Object:  Database [Meta_Metrics_Error_Mart]    Script Date: 21/09/2023 8:46:33 pm ******/
+CREATE DATABASE [Meta_Metrics_Error_Mart]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'MetaMetricsErrorMart', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.DATAWAREHOUSE\MSSQL\DATA\MetaMetricsErrorMart.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB ), 
+ FILEGROUP [DATA] 
+( NAME = N'MetaMetricsErrorMart_data', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.DATAWAREHOUSE\MSSQL\DATA\MetaMetricsErrorMart_data.ndf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 10%), 
+ FILEGROUP [INDEX] 
+( NAME = N'MetaMetricsErrorMart_index', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.DATAWAREHOUSE\MSSQL\DATA\MetaMetricsErrorMart_index.ndf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 10%)
+ LOG ON 
+( NAME = N'MetaMetricsErrorMart_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.DATAWAREHOUSE\MSSQL\DATA\MetaMetricsErrorMart_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [Meta_Metrics_Error_Mart].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET AUTO_CLOSE OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET  DISABLE_BROKER 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET RECOVERY SIMPLE 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET DELAYED_DURABILITY = DISABLED 
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET QUERY_STORE = OFF
+GO
+
+ALTER DATABASE [Meta_Metrics_Error_Mart] SET  READ_WRITE 
+GO
