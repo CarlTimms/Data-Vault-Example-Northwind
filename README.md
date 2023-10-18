@@ -14,10 +14,10 @@ The objective of this project is to develop an easily accessible example data wa
 2. Run the following script to create the source Northwind database
 	* SQL\DDL\Source\instnwnd.sql
 3. Create the Data Vault databases. You have two options:  
-	They can be set up quickly by executing the SQL scripts in the following directory
-	* SQL\DDL\Simple\...  
-	Alternatively, they can be created in a step-by-step fashion by executing the scripts within
-	* SQL\DDL\Detailed\...
+	They can be set up quickly by executing the SQL scripts in the following directory  
+	* SQL\DDL\Simple  
+	Alternatively, they can be created in a step-by-step fashion by executing the scripts within  
+	* SQL\DDL\Detailed  
 4. Conduct the one-off load of ghost records into the necessary raw Data Vault tables
 	* SQL\DML\ghost records.sql
 5. Confirm setup is correct with an initial load. Run the following script to execute the stored procedures in Staging, Data_Vault, and Information_Mart
