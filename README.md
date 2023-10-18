@@ -28,4 +28,3 @@ The objective of this project is to develop an easily accessible example data wa
 - Basic documentation covering the data models, standards, conventions, etc. can be located in the Documentation directory
 - This project does not cover the creation of the meta/metrics/error marts at this stage. Refer to Dan Linstedt's book 'Building a Scalable Data Warehouse with Data Vault 2.0' for the necessary details
 - Any attempt at building a production Data Vault 2.0 data warehouse should be preceded by taking the CDVP2 course offered by [Data Vault Alliance](https://datavaultalliance.com/) and their authorised training partners
-- This implementation is compliant with Data Vault 2.0 standards taught in CDVP2 as at July 2023
