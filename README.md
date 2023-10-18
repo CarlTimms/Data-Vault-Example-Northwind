@@ -13,10 +13,8 @@ The objective of this project is to develop an easily accessible example data wa
 1. Set up a new SQL Server instance to hold the five component databases
 2. Run the following script to create the source Northwind database
 	* SQL\DDL\Source\instnwnd.sql
-3. Create the Data Vault databases. You have two options:  
-	They can be set up quickly by executing the SQL scripts in the following directory  
+3. Create the Data Vault databases. You have two options. The first of the following directories contains scripts to quickly create the databases and the second enables them to be created in a step-by-step fashion. The end result will be identical:
 	* SQL\DDL\Simple  
-	Alternatively, they can be created in a step-by-step fashion by executing the scripts within  
 	* SQL\DDL\Detailed  
 4. Conduct the one-off load of ghost records into the necessary raw Data Vault tables
 	* SQL\DML\ghost records.sql
